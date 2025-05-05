@@ -1,0 +1,10 @@
+SELECT
+  date_date AS day,                                      -- Column 1: Sale date
+  ROUND(SUM(turnover), 2) AS daily_turnover,             -- Column 2: Daily turnover
+  ROUND(SUM(purchase_cost), 2) AS daily_purchase_cost    -- Column 3: Daily purchase cost
+FROM
+  `my-new-project-457509.gwz_sales_github.gwz_sales_github`
+GROUP BY
+  day
+ORDER BY
+  day;
